@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#e11d48">
+    <title>Homenagem às Mães ❤️</title>
+    
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="icon-192.png" type="image/png">
+    <link rel="apple-touch-icon" href="icon-192.png">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ==================== TELA INICIAL ==================== -->
+    <div id="splash-screen" class="splash-screen">
+        <div class="splash-content">
+            <div class="heart-big">❤️</div>
+            <h1 class="splash-title">Feliz Dia das Mães</h1>
+            <p class="splash-subtitle">Uma homenagem especial<br>para a pessoa mais importante da minha vida</p>
+            
+            <!-- Botão de Música -->
+            <div class="music-container">
+                <button id="music-btn" onclick="toggleMusic()">
+                    🎵 Tocar Música para Mamãe
+                </button>
+                
+                <!-- Texto novo adicionado aqui -->
+                <p class="wait-text">⏳ Espere 25 segundos para entrar na homenagem!</p>
+            </div>
+
+            <button onclick="entrarHomenagem()" class="enter-btn">
+                Entrar na Homenagem ❤️
+            </button>
+            
+            <p class="made-with">Feito com muito amor • 2026</p>
+        </div>
+    </div>
+
+    <!-- ==================== TELA PRINCIPAL ==================== -->
+    <div id="main-screen" class="main-screen hidden">
+        <div class="container">
+            <header>
+                <div class="heart">❤️</div>
+                <h1>Feliz Dia das Mães!</h1>
+                <p class="subtitle">A maior homenagem do mundo</p>
+            </header>
+
+            <div class="hero">
+                <img src="images/mae.jpg" alt="Mãe e filha">
+            </div>
+
+            <div class="pride-section">
+                <p class="pride-text">
+                    SOU MUITO<br>
+                    ORGULHOSA<br>
+                    DE SER<br>
+                    SUA FILHA ❤️
+                </p>
+            </div>
+
+            <div class="emotional-text">
+                <p>
+                    Mamãe, você é o meu maior presente, meu porto seguro e a pessoa que mais amo neste mundo.
+                    Obrigada por me carregar no ventre, por aguentar minhas birras, por secar minhas lágrimas,
+                    por comemorar minhas vitórias e por nunca desistir de mim.
+                    Cada sacrifício que você fez, cada noite acordada, cada palavra de incentivo e cada abraço apertado
+                    estão guardados para sempre no meu coração.
+                </p>
+                <p>
+                    Sou quem sou hoje porque tive a melhor mãe do mundo.
+                    Você me ensinou o que é amor verdadeiro, força, coragem e dedicação.
+                    Não existe nenhuma palavra no mundo capaz de expressar toda a gratidão e o amor que sinto por você.
+                </p>
+                <p><strong>Te amo hoje, amanhã e por toda a eternidade.</strong></p>
+            </div>
+
+            <div class="quotes">
+                <div class="quote-card">
+                    <p>"Mãe é aquele ser que quando a gente nasce, já nos ama antes mesmo de nos conhecer."</p>
+                    <span class="author">— Desconhecido</span>
+                </div>
+                <div class="quote-card">
+                    <p>"Deus não podia estar em todos os lugares ao mesmo tempo, por isso criou as mães."</p>
+                    <span class="author">— Provérbio judaico</span>
+                </div>
+            </div>
+
+            <h2 class="gallery-title">Momentos inesquecíveis</h2>
+            <div class="gallery">
+                <img src="images/mae2.jpg" alt="Mãe e filha">
+                <img src="images/mae3.jpg" alt="Mãe com flores">
+                <img src="images/mae4.jpg" alt="Família">
+                <img src="images/mae5.jpeg" alt="Mãe sorrindo">
+            </div>
+
+            <div class="buttons-area">
+                <div class="footer">
+                    <button onclick="enviarHomenagem()">
+                        ❤️ Enviar um abraço virtual para minha mãe
+                    </button>
+                    <p>Feito com muito amor • 2026</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Dancing+Script:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    background: linear-gradient(135deg, #ff4d4d 0%, #ff69b4 50%, #ff1493 100%);
+    color: white;
+    min-height: 100vh;
+    padding-bottom: 30px;
+}
+
+.container {
+    max-width: 420px;
+    margin: 0 auto;
+    background: rgba(255,255,255,0.1);
+    min-height: 100vh;
+    box-shadow: 0 0 30px rgba(0,0,0,0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 30px 20px 10px;
+}
+
+.heart {
+    font-size: 60px;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.25); }
+    100% { transform: scale(1); }
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.8rem;
+    margin: 10px 0;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    opacity: 0.95;
+}
+
+/* Foto Principal */
+.hero {
+    text-align: center;
+    padding: 10px 20px 10px;
+}
+
+.hero img {
+    width: 96%;
+    max-height: 480px;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 22px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.45);
+    border: 8px solid white;
+}
+
+/* TEXTO GIGANTE */
+.pride-section {
+    padding: 20px 15px 10px;
+    text-align: center;
+}
+
+.pride-text {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.4rem;
+    line-height: 1.1;
+    text-shadow: 0 6px 15px rgba(0,0,0,0.5);
+    background: rgba(255,255,255,0.2);
+    padding: 25px 15px;
+    border-radius: 20px;
+    margin: 0 15px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* TEXTO EMOCIONAL */
+.emotional-text {
+    padding: 25px 20px;
+    margin: 10px 15px 25px;
+    background: rgba(255,255,255,0.18);
+    border-radius: 22px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.emotional-text p {
+    font-size: 1.25rem;
+    line-height: 1.7;
+    margin-bottom: 18px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.emotional-text strong {
+    font-size: 1.35rem;
+    color: #ffe6f0;
+}
+
+/* Frases */
+.quotes {
+    padding: 25px 20px;
+}
+
+.quote-card {
+    background: rgba(255,255,255,0.2);
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.quote-card p {
+    font-style: italic;
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+}
+
+.author {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* Galeria */
+.gallery-title {
+    text-align: center;
+    margin: 35px 0 15px;
+    font-size: 2.1rem;
+    font-family: 'Dancing Script', cursive;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    letter-spacing: 1px;
+}
+
+.gallery {
+    padding: 10px 20px 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.04);
+}
+
+.gallery img:nth-child(4) {
+    object-position: center 25%;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 40px 20px 60px;
+    background: rgba(0,0,0,0.2);
+}
+
+button {
+    background: white;
+    color: #ff1493;
+    border: none;
+    padding: 18px 40px;
+    font-size: 1.3rem;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    width: 100%;
+    max-width: 320px;
+}
+
+button:hover {
+    transform: translateY(-5px);
+}
+
+/* Flores flutuantes (opcional) */
+.flowers {
+    position: fixed;
+    font-size: 30px;
+    opacity: 0.3;
+    pointer-events: none;
+    z-index: 100;
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-120vh) rotate(25deg);
+        opacity: 0;
+    }
+}
+/* ===================== TELA INICIAL ===================== */
+.splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff4d4d, #ff1493);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: opacity 1s ease;
+}
+
+.splash-content {
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.heart-big {
+    font-size: 90px;
+    animation: pulse 2s infinite;
+    margin-bottom: 20px;
+}
+
+.splash-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.2rem;
+    margin-bottom: 15px;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+.splash-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 50px;
+    opacity: 0.95;
+}
+
+.enter-btn {
+    background: white;
+    color: #ff1493;
+    border: none;
+    padding: 18px 45px;
+    font-size: 1.4rem;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transition: all 0.3s;
+}
+
+.enter-btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}
+
+.made-with {
+    margin-top: 60px;
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+/* Classe para esconder */
+.hidden {
+    display: none !important;
+}
+/* Espaçamento extra na tela de homenagem */
+.container {
+    padding-bottom: 40px;
+}
+
+/* Área dos botões mais para baixo */
+.buttons-area {
+    margin-top: 50px;        /* Aumenta o espaço antes dos botões */
+    padding-bottom: 30px;
+}
+
+.music-container {
+    margin: 25px 0 35px 0;   /* Espaço entre os dois botões */
+    text-align: center;
+}
+
+#music-btn-main {
+    background: rgba(255, 255, 255, 0.95);
+    color: #ff1493;
+    border: none;
+    padding: 16px 35px;
+    font-size: 1.25rem;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 320px;
+}
+
+#music-btn-main:hover {
+    transform: scale(1.05);
+}
+
+#music-btn-main.playing {
+    background: #ffe6f0;
+    color: #c0266f;
+    animation: pulse 2s infinite;
+}
+.wait-text {
+    text-align: center;
+    margin-top: 12px;
+    font-size: 1.05rem;
+    opacity: 0.85;
+    color: white;
+    font-weight: 500;
+}
